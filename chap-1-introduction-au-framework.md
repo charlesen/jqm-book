@@ -17,6 +17,7 @@ L’explosion des ventes de smartphones et le besoin toujours plus grand des int
 Installer la plate-forme jQuery Mobile se fait aussi simplement que l'installation de jQuery. Il suffit en effet de soit :
 
 * **Télécharger le fichier JavaScript et de l'appeler dans son fichier html**. Il faut dans ce cas télécharger également:
+
   * La feuille de style jquerymobile.css
   * Le dossier d'images à mettre dans le même répertoire que les fichiers.
 
@@ -56,12 +57,12 @@ Définition d'une page de base en jQuery Mobile :
     <div data-role="page">
         <div data-role="header">
             <h1>Un Titre</h1>
-        </div><!-- /header →
-        
+        </div><!-- /header -->
+
         <div data-role="content">
             <p>Hello world</p>
         </div><!-- /content -->
-        
+
     </div><!-- /page -->
 </body >
 ```
@@ -82,19 +83,15 @@ Et avec un exemple complet :
     <div data-role="page">
         <div data-role="header">
             <h1>Un Titre</h1>
-        </div><!-- /header →
-        
+        </div><!-- /header -->
+
         <div data-role="content">
             <p>Bonjour le monde !</p>
         </div><!-- /content -->
-        
+
     </div><!-- /page -->
 </body >
 ```
-
-
-
-
 
 Bravo, vous venez officielement de démarrer votre projet jQuery Mobile. Etonnant de simplicité n'est-ce pas ? Passons donc à la suite qui devrait vraiment vous plaire.
 
