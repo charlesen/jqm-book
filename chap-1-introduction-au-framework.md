@@ -1,6 +1,4 @@
-# Couverture {#id-titre-demo2-jquery-gestion-des-v-nements}
-
-# Introduction au Framework
+1 . Introduction au Framework
 
 
 
