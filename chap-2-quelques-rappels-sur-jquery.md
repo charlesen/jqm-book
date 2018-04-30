@@ -163,29 +163,27 @@ Pour la voir en action, modifions un peu le code html précédent :
 <html>
     ...
     <body>
-    
+
         <div class="container">
-            
+
             <h1 id="titre">Demo2 jQuery - Manipulation du DOM</h1> 
             <div id="contenu1">                
                 <p>
                     Voici du beau contenu html qui sera entièrement récupéré.
                 </p>
-                
+
                 <ul>
                     <li>1 - Un</li>                    
                     <li>2 - Deux</li>
                 </ul>            
             </div><!--- Contenu html qui sera récupéré-->
-        
+
         </div><!--- Container -->
-    
+
     </body >
 
 </html >
 ```
-
-
 
 Pour récupérer le contenu HTML, il suffit de faire :
 
@@ -219,8 +217,6 @@ var contenuHTML = $('#contenu').html(autre_contenuHTML); alert('## DEBUT ## ' + 
 
 Supprime tous les éléments du DOM répondant aux critères de sélection. Attention, cette fonctionne ne supprime PAS les éléments de l'objet jQuery, ce qui permet une utilisation de ces éléments même si ceux ci ne figurent plus dans le document.
 
-
-
 Considérons le contenu html suivant :
 
 ```js
@@ -235,8 +231,6 @@ Considérons le contenu html suivant :
 </div>
 ```
 
-
-
 Nous choisissons de supprimer le mot 'World' du contenu. Il suffit de faire :
 
 ```js
@@ -244,8 +238,6 @@ $('.hello').remove();
 ```
 
 Qui aura pour résultat la suppression du bloc contenant la classe 'world'. On aura finalement :
-
-
 
 ```js
 <div class="container">
@@ -256,8 +248,6 @@ Qui aura pour résultat la suppression du bloc contenant la classe 'world'. On a
 
 </div>
 ```
-
-
 
 Si plusieurs blocs possèdent la classe sélectionnée, ils seront également supprimer. Cette fonction est particulièrement intéressante dans le cas où l'on souhaiterait supprimer du contenu, sans affecter la hiérarchie du DOM.
 
@@ -286,9 +276,9 @@ Ce texte ne sera PAS supprimé.
 
 <script>
     $("button").click(function () {
-    
+
         $("p").remove();
-    
+
     });
 </script>
 
@@ -313,20 +303,20 @@ On peut aussi choisir de ne supprimer que des paragraphes possédant une certain
 <body>
 
     <p class="hello">Hello mobinaute ! </p>
-    
+
     <p>Comment vas-tu</p>
-    
+
     Ce texte ne sera PAS supprimé.
-    
+
     <p>aujourd'hui?</p>
-    
+
     <button>Supprimer les paragraphes</button>
-    
+
     <script>
         $("button").click(function () {
-        
+
         $("p").remove(":contains('Hello')");
-        
+
         });
     </script>
 
@@ -340,9 +330,8 @@ Les événements font partis intégrante de jQuery. Ils permettent de gérer les
 
 * **document.ready\(\)** permet de déclencher l’exécution du code au chargement complet de la page en cours, ceci remplace la fonction onload\(\) de JavaScript.
 
-
-
 * **click** :
+
   * ```js
     // L'exemple ci-dessous permet de simuler le clic d'un utilisateur.
     $('#mon_selecteur').click( function() {
@@ -354,11 +343,9 @@ Les événements font partis intégrante de jQuery. Ils permettent de gérer les
     <button id="mon_selecteur">Cliquez-moi</button>
     ```
 
-
-
 D'autres événements se fondent sur le même principe : blur, bind, change, mouseon, mouseup …
 
 Dans les exemple précédents, nous avons sans le signaler utilisé des événements. Il en existe un certain nombre, plusieurs dizaines pris en charges par jQuery, mais les plus utilisés sont très certainement bind, click, toggle, change, submit , ready et load. Un événement est presque toujours associé à une sélection, et donc affecté à un objet du DOM.
 
-[^1]: Le DOM \(Document Object Model\) est une interface de programmation \(API\) qui décrit la structure d'un document et surtout la manière d'y accéder et de le manipuler. Plus d'informations sur Wikipédia \([http://fr.wikipedia.org/wiki/Document\_Object\_Model\](http://fr.wikipedia.org/wiki/Document_Object_Model%29\)
+[^1]: Le DOM \(Document Object Model\) est une interface de programmation \(API\) qui décrit la structure d'un document et surtout la manière d'y accéder et de le manipuler. Plus d'informations sur Wikipédia : [https://fr.wikipedia.org/wiki/Document\_Object\_Model](https://fr.wikipedia.org/wiki/Document_Object_Model)
 
