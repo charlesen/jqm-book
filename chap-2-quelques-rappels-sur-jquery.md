@@ -27,25 +27,24 @@ $("*") ;
 #### Sélection d’éléments HTML
 
 * Paragraphe :
+
   * ```js
     $('p') ; //Sélectionne tous les paragraphes de la page html
     ```
 
 * Sélection tous les éléments de type hx \(h1, h2, h3, h4, ...\)
+
   * ```js
     $(":header") ;
     ```
 
 * Liste à puces :
+
   * ```js
     $('li') ; //Sélectionne tous les éléments de type liste.
     ```
 
-
-
 #### Sélection de classes css et d'id
-
-
 
 ```js
 $('.demo') ; //La classe s’appelle ‘demo’
@@ -54,17 +53,11 @@ $('.demo') ; //La classe s’appelle ‘demo’
 $('#contenu') ; //L’id s’appelle ‘contenu’
 ```
 
-
-
 #### Sélectionne d'éléments comportant un mot clé
-
-
 
 ```js
 $(":contains('mobinaute')") ; // Renvoie tous les éléments contenant le mot clé "mobinaute"
 ```
-
-
 
 #### Sélection d'éléments HTML
 
@@ -72,19 +65,13 @@ $(":contains('mobinaute')") ; // Renvoie tous les éléments contenant le mot cl
 $("a:has(img)") ; // Renvoi tous les blocs d'éléments comportant des images
 ```
 
-
-
 ```
 $(input[type= "submit"]) ou $( :submit); // Sélectionne tous les éléments de type submit
 ```
 
-
-
 ```
 $("td:empty") ; // Sélectionne toutes les cases vides d 'un tableau
 ```
-
-
 
 Une fois ces éléments sélectionnés on peut leur appliquer un certain nombre de changements gérés dynamiquement par jQuery.
 
@@ -94,15 +81,13 @@ Ainsi si nous souhaitons ajouter une classe **'rouge'** à un élément ayant po
 $(document).ready( function() {
 
     $('#header').addClass('rouge');
-    
+
     $('#footer').addClass('noir');
 
 });
 ```
 
 La fonction **$\(\)** va donc nous permettre de sélectionner tout \(ou presque tout\) ce que l'on souhaite.
-
-
 
 ## 2.2 . Manipulation du DOM1 \(Document Object Model\)
 
@@ -121,11 +106,11 @@ Supposons que nous ayons le code html suivant :
 
     <h1 id="titre">Demo1 jQuery - Manipulation du DOM</h1> 
     <p id="contenu">
-        
+
         Hello <b>Mobinaute</b> <br />
-        
+
         Je suis un contenu qui va s'afficher sous forme d'alerte. <br /> Je suis un exemple pour montrer à quel point il est facile d'utiliser la fonction <b>text()</b>.
-    
+
     </p>
 
 </div>
@@ -143,5 +128,20 @@ var contenu = $("#contenu").text();
 
 La variable contenu contient le texte du paragraphe.
 
-[^1]: Le DOM \(Document Object Model\) est une interface de programmation \(API\) qui décrit la structure d'un document et surtout la manière d'y accéder et de le manipuler. Plus d'informations sur Wikipédia \(http://fr.wikipedia.org/wiki/Document\_Object\_Model\)
+Dans cet exemple, nous affichons simplement le contenu du paragraphe dans une alerte javascript :
+
+```js
+
+<script>
+
+var contenu = $('#contenu').text(); // Juste du texte
+
+alert('## DEBUT ## ' + contenu + ' ## FIN ##');// Affiche une alerte </script>
+```
+
+![](/assets/jqm_exemple_1.jpeg.jpg)
+
+cd
+
+[^1]: Le DOM \(Document Object Model\) est une interface de programmation \(API\) qui décrit la structure d'un document et surtout la manière d'y accéder et de le manipuler. Plus d'informations sur Wikipédia \([http://fr.wikipedia.org/wiki/Document\_Object\_Model\](http://fr.wikipedia.org/wiki/Document_Object_Model\)\)
 
